@@ -60,6 +60,7 @@ body {
     top: 40%; /*to get the center*/
     left: 50%; /*to get the center*/
     transform: translate(-50%, -50%); /*to move the box element*/
+    text-align: center;
 }
 
 /*heading primary*/
@@ -69,6 +70,7 @@ body {
     /* to fix animation */
     /* this make back side to element hidden say when we rotate it or move it*/
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -120,4 +122,32 @@ body {
         opacity: 1;
         transform: translate(0);
     }
+}
+
+/*:<pseudeo class> it si a special state of element */
+.btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+
+    /*For transition to work it must be set on parent element*/
+    transition: all .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+    transform: translate(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+
+}
+
+.btn-white {
+    background-color: white;
+    color: #777;
 }

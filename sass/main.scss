@@ -6,6 +6,10 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
 /*Basic css reset*/
 *, *::after, *::before {
   /*As browser ass some margin and padding*/
@@ -13,12 +17,15 @@ Dark green: #28b485
   padding: 0;
   /*border and padding not add to total height of border box*/
   /*box-sizing: border-box;*/
+
   /*Inherits from body tag*/
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 /* Root font size */
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 /*Project wide font definition */
 body {
@@ -28,7 +35,8 @@ body {
   line-height: 1.7;
   color: #777777;
   padding: 3rem;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .header {
   height: 95vh;
@@ -37,29 +45,37 @@ body {
   background-size: cover;
   /*Image always stays top or centre or bottom or top on browese resize */
   /*noinspection CssOptimizeSimilarProperties*/
-  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg") top;
+  background: linear-gradient(
+                  to right bottom,
+                  rgba($color-primary-light, 0.8),
+                  rgba($color-primary-dark, 0.8)
+  ),
+  url("../img/hero.jpg") top;
   /*Cut in polygon shape     */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
+  position: relative;
+}
 
 /*Set parent element to relative in this case header is parent element*/
 .logo-box {
+
   position: absolute;
   top: 4rem;
-  left: 4rem; }
+  left: 4rem;
+}
 
 .logo {
-  height: 3.5rem; }
+  height: 3.5rem;
+}
 
 .text-box {
   position: absolute;
-  top: 40%;
-  /*to get the center*/
-  left: 50%;
-  /*to get the center*/
-  transform: translate(-50%, -50%);
-  /*to move the box element*/
-  text-align: center; }
+  top: 40%; /*to get the center*/
+  left: 50%; /*to get the center*/
+  transform: translate(-50%, -50%); /*to move the box element*/
+  text-align: center;
+
+}
 
 /*heading primary*/
 .heading-primary {
@@ -68,7 +84,8 @@ body {
   /* to fix animation */
   /* this make back side to element hidden say when we rotate it or move it*/
   backface-visibility: hidden;
-  margin-bottom: 6rem; }
+  margin-bottom: 6rem;
+}
 
 .heading-primary-main {
   display: block;
@@ -76,7 +93,8 @@ body {
   font-weight: 400;
   letter-spacing: 3.5rem;
   animation-name: moveInLeft;
-  animation-duration: 3s; }
+  animation-duration: 3s;
+}
 
 .heading-primary-sub {
   display: block;
@@ -87,27 +105,38 @@ body {
   animation-duration: 3s;
   /*animation-delay: 3s;*/
   /*animation-iteration-count: 3;*/
-  animation-timing-function: ease-out; }
+  animation-timing-function: ease-out;
+
+}
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem); }
+    transform: translateX(-10rem);
+  }
   80% {
-    transform: translate(2rem); }
+    transform: translate(2rem);
+  }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem); }
+    transform: translateX(10rem);
+  }
+
   80% {
-    transform: translate(-2rem); }
+    transform: translate(-2rem);
+  }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 /*:<pseudeo class> it si a special state of element */
 .btn:link, .btn:visited {
@@ -116,23 +145,29 @@ body {
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 10rem;
+
   /*For transition to work it must be set on parent element*/
   transition: all .2s;
   position: relative;
   font-size: 1.6rem;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
 
 .btn:active {
   transform: translate(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+
+}
 
 .btn-white {
   background-color: white;
-  color: #777; }
+  color: #777;
+}
 
 .btn::after {
   content: "";
@@ -144,11 +179,14 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s; }
+  transition: all .4s;
+}
 
 .btn-white::after {
-  background-color: white; }
+  background-color: white;
+}
 
 .btn:hover::after {
   transform: scaleX(1.5);
-  opacity: 0; }
+  opacity: 0;
+}

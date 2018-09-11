@@ -10,7 +10,7 @@
  2. Id
  3. Classes, pseudo classes, attributes
  4. Element , pseudo element 
-* `But value to calculate specicity is (inline,id,classe,element)` <br>
+* `But value to calculate specicity is (inline,id,classes,element)` <br>
     `eg (1,1,0,0) > (0,2,1,1)`
 ### 3. Source Order
 

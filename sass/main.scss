@@ -6,6 +6,7 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
@@ -138,6 +139,17 @@ body {
   }
 }
 
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 /*:<pseudeo class> it si a special state of element */
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -167,6 +179,7 @@ body {
 .btn-white {
   background-color: white;
   color: #777;
+
 }
 
 .btn::after {
@@ -189,4 +202,9 @@ body {
 .btn:hover::after {
   transform: scaleX(1.5);
   opacity: 0;
+}
+
+.btn-animated {
+  animation: moveUp 1s ease-out .75s;
+  animation-fill-mode: backwards;
 }

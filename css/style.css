@@ -109,6 +109,14 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 /*:<pseudeo class> it si a special state of element */
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -152,3 +160,7 @@ body {
 .btn:hover::after {
   transform: scaleX(1.5);
   opacity: 0; }
+
+.btn-animated {
+  animation: moveUp 1s ease-out .75s;
+  animation-fill-mode: backwards; }

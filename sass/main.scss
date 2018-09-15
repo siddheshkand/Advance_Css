@@ -1,22 +1,10 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
 @import "base/base";
-
-//site color
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-
-//text color
-$color-grey-dark: #777;
-$color-white: #fff;
-$color-black: #000;
+@import "base/animation";
+@import "base/typography";
+@import "base/utilities";
+@import "abstract/variables";
+@import "abstract/function";
+@import "abstract/mixins";
 
 /*Basic css reset*/
 *, *::after, *::before {

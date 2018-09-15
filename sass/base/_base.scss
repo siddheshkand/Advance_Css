@@ -1,0 +1,27 @@
+
+/*Basic css reset*/
+*, *::after, *::before {
+  /*As browser ass some margin and padding*/
+  margin: 0;
+  padding: 0;
+  /*border and padding not add to total height of border box*/
+  /*box-sizing: border-box;*/
+  /*Inherits from body tag*/
+  box-sizing: inherit;
+}
+
+/* Root font size */
+html {
+  font-size: 62.5%;
+}
+
+/*Project wide font definition */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 3rem;
+  box-sizing: border-box;
+}

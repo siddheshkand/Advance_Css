@@ -30,27 +30,33 @@ body {
   padding: 3rem;
   box-sizing: border-box; }
 
-.header {
-  height: 95vh;
-  background-size: cover;
-  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg") top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
-  .header__logo__box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text_box {
-    position: absolute;
-    top: 40%;
-    /*to get the center*/
-    left: 50%;
-    /*to get the center*/
-    transform: translate(-50%, -50%);
-    /*to move the box element*/
-    text-align: center; }
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translate(2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translate(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 /*heading primary*/
 .heading-primary {
@@ -79,34 +85,6 @@ body {
   /*animation-delay: 3s;*/
   /*animation-iteration-count: 3;*/
   animation-timing-function: ease-out; }
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translate(2rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  80% {
-    transform: translate(-2rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveUp {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
 
 /*:<pseudeo class> it si a special state of element */
 .btn:link, .btn:visited {
@@ -155,3 +133,38 @@ body {
 .btn-animated {
   animation: moveUp 1s ease-out .75s;
   animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  background-size: cover;
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../../img/hero.jpg") top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+  .header__logo__box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text_box {
+    position: absolute;
+    top: 40%;
+    /*to get the center*/
+    left: 50%;
+    /*to get the center*/
+    transform: translate(-50%, -50%);
+    /*to move the box element*/
+    text-align: center; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 8rem) / 2);
+    background-color: orangered;
+    float: left; }
+    .row .col-1-of-2:not(:last-child) {
+      margin-right: 6rem; }

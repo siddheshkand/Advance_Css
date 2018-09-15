@@ -1,0 +1,25 @@
+
+.header {
+  height: 95vh;
+  background-size: cover; //Make the element fit always inside the box of viewport
+  background: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
+  url("../../img/hero.jpg") top; //Image always stays top or centre or bottom or top on browser resize
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); //Cut in polygon shape
+  position: relative;
+
+  &__logo__box {
+    position: absolute; //If you do this Set parent element to relative in this case header is parent element
+    top: 4rem;
+    left: 4rem;
+  }
+  &__logo {
+    height: 3.5rem;
+  }
+  &__text_box {
+    position: absolute;
+    top: 40%; /*to get the center*/
+    left: 50%; /*to get the center*/
+    transform: translate(-50%, -50%); /*to move the box element*/
+    text-align: center;
+  }
+}

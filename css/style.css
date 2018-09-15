@@ -26,40 +26,31 @@ body {
   font-weight: 400;
   /*font-size: 16px;*/
   line-height: 1.7;
-  color: #777777;
+  color: #777;
   padding: 3rem;
   box-sizing: border-box; }
 
 .header {
   height: 95vh;
-  /*noinspection CssOptimizeSimilarProperties*/
-  /*Make the element fit always inside the box of viewport*/
   background-size: cover;
-  /*Image always stays top or centre or bottom or top on browese resize */
-  /*noinspection CssOptimizeSimilarProperties*/
   background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg") top;
-  /*Cut in polygon shape     */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
-
-/*Set parent element to relative in this case header is parent element*/
-.logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.logo {
-  height: 3.5rem; }
-
-.text-box {
-  position: absolute;
-  top: 40%;
-  /*to get the center*/
-  left: 50%;
-  /*to get the center*/
-  transform: translate(-50%, -50%);
-  /*to move the box element*/
-  text-align: center; }
+  .header__logo__box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text_box {
+    position: absolute;
+    top: 40%;
+    /*to get the center*/
+    left: 50%;
+    /*to get the center*/
+    transform: translate(-50%, -50%);
+    /*to move the box element*/
+    text-align: center; }
 
 /*heading primary*/
 .heading-primary {
@@ -155,7 +146,7 @@ body {
   transition: all .4s; }
 
 .btn-white::after {
-  background-color: white; }
+  background-color: #fff; }
 
 .btn:hover::after {
   transform: scaleX(1.5);
